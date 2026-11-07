@@ -13,9 +13,13 @@ button.p{background:var(--a);color:#fff;border-color:var(--a)}
 .dr{display:flex;gap:6px;align-items:center;margin:6px 0}.dr input{min-width:0}
 label{display:block;font-size:12px;color:var(--m);margin-bottom:2px}h3,h4{margin:8px 0}
 input,select,textarea{width:100%;min-height:44px;padding:8px;border:1px solid var(--b);border-radius:8px;background:var(--bg);color:var(--t);font:inherit}
-input[type=checkbox]{width:22px;min-height:22px}summary{cursor:pointer;font-weight:bold;padding:6px 0}
+input[type=checkbox]{width:22px;min-height:22px}
+summary{cursor:pointer;font-weight:bold;padding:6px 0;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"▼";font-size:13px;color:var(--a)}
+details[open]>summary::after{content:"▲"}
+details[open]>summary{margin-bottom:8px}
 .w{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13px}td,th{border:1px solid var(--b);padding:4px 6px;text-align:center;white-space:nowrap}
 .err{color:#d92d20}.m{color:var(--m);font-size:12px}svg{width:100%;height:auto;background:var(--bg);border:1px solid var(--b)}
-
 .lbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}.lb{border:1px dashed var(--m);border-radius:6px;padding:6px;font-size:12px;break-inside:avoid}.pb{break-before:page}
 @media print{nav,button,.np{display:none}body{background:#fff;color:#000}main{padding:0}.card{break-inside:avoid}svg text{fill:#000}@page{size:A4 landscape;margin:10mm}}
